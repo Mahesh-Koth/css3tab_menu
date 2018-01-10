@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>css3 tab menu</title>
+    <meta charset="utf-8>
+    <style>
+      .figure{
+        position: relative;
+        border: 1px solid;
+      }
+      .box1, .box2, .box3{
+        display: none;
+      }
+      .box1, .box2, .box3{
+        width: 200px; height: 200px; 
+      }
+      .box1{background: #abc;}
+      .box2{background: #cbc;}
+      .box3{background: #bba;}
+      #btn1 ~ .box1{display:none;}
+      #btn1:checked ~ .box1{ display: block;}
+      #btn2 ~ .box2{display:none;}
+      #btn2:checked ~ .box2{ display: block;}
+      #btn3 ~ .box3{display:none;}
+      #btn3:checked ~ .box3{ display: block;}
+
+      #btn1, #btn2, #btn3{ display:none;}
+      .btn{ 
+        background: #e80;
+        padding: 0 10px;
+      }
+    </style>
+    
+  </head>
+<body> 
+  <div class="figure">
+    <label for="btn1" class="btn">1</label>
+    <input type="radio" name="radio" id="btn1" checked>
+    <label for="btn2" class="btn">2</label>
+    <input type="radio" name="radio" id="btn2">
+    <label for="btn3" class="btn">3</label>
+    <input type="radio" name="radio" id="btn3">  
+    <div class="box1">
+      box1
+    </div>
+    <div class="box2">
+      box2
+    </div>
+    <div class="box3">
+      box3
+    </div>  
+  </div>
+</body> 
+</html>
